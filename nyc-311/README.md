@@ -1,5 +1,7 @@
 # NYC 311 service-request operations
 
+![Bar charts showing the highest-volume request types and median recorded closure times](chart.svg)
+
 **Question:** Which complaint types drive one week's 311 workload, and how do administrative closure times vary?
 
 **Source:** [NYC Open Data, 311 Service Requests from 2020 to Present](https://data.cityofnewyork.us/d/erm2-nwe9), accessed September 28, 2026. The included extract selects only `unique_key`, `created_date`, `closed_date`, `agency`, `complaint_type`, `borough`, and `status` for requests created June 1–7, 2026. No addresses or personal details are included.

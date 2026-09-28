@@ -11,3 +11,5 @@ Three reproducible, public-data projects focused on clear business questions, da
 These are public-data practice projects, not client or employer work. The repository excludes personal contact information and the large Washington CSV; the source and reproduction instructions are in each project.
 
 The HTML pages can be opened locally. Source data and methods are credited in the project READMEs.
+
+Each project README includes a chart that displays directly on GitHub.

@@ -1,5 +1,7 @@
 # Washington electric vehicle registry snapshot
 
+![Bar charts showing battery-electric share and Washington counties with the most registered EVs](chart.svg)
+
 **Question:** Where are registered electric vehicles concentrated in Washington, and what is their vehicle-type mix?
 
 **Source:** [Washington State Department of Licensing, Electric Vehicle Population Data](https://data.wa.gov/d/f6w7-q2d2), accessed September 28, 2026. Public data, [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/). This repository credits the original data provider and links to the current source.

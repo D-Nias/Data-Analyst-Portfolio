@@ -1,5 +1,7 @@
 # Entry-level data analytics portfolio
 
+![Bar charts comparing purchase rates by visitor type and product-page browsing depth](chart.svg)
+
 Open `index.html` for the finished case study. The project uses the [UCI Online Shoppers Purchasing Intention dataset](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset) (12,330 sessions; CC BY 4.0). Source credit: Sakar, C. & Kastro, Y. (2018), DOI: 10.24432/C5F88Q.
 
 ## What this project demonstrates
