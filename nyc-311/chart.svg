@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="900" viewBox="0 0 1000 900" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img">
 <title>NYC 311 service operations</title><desc>80,941 requests created June 1–7, 2026. Source: NYC Open Data 311 service requests</desc>
-<rect width="1000" height="900" fill="#ffffff"/>
+<rect width="1000" height="1000" fill="#ffffff"/>
 <rect width="1000" height="12" fill="#8059b1"/>
 <text x="55" y="68" fill="#15243a" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="bold" text-anchor="start">NYC 311 service operations</text>
 <text x="55" y="102" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="normal" text-anchor="start">80,941 requests created June 1–7, 2026</text>
@@ -14,6 +14,6 @@
 <text x="55" y="561" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="normal" text-anchor="start">Damaged Tree</text><rect x="55" y="571" width="690" height="24" rx="12" fill="#e8edf2"/><rect x="55" y="571" width="173.5" height="24" rx="12" fill="#8059b1"/><text x="763" y="591" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold" text-anchor="start">47.77 h</text>
 <text x="55" y="623" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="normal" text-anchor="start">Unsanitary Condition</text><rect x="55" y="633" width="690" height="24" rx="12" fill="#e8edf2"/><rect x="55" y="633" width="633.3" height="24" rx="12" fill="#8059b1"/><text x="763" y="653" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold" text-anchor="start">174.38 h</text>
 <text x="55" y="732" fill="#647285" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="normal" text-anchor="start">Valid closed requests only; closure does not imply physical repair</text>
-<line x1="55" y1="827" x2="945" y2="827" stroke="#d6dee8"/>
-<text x="55" y="858" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="normal" text-anchor="start">Source: NYC Open Data 311 service requests</text>
+<line x1="55" y1="927" x2="945" y2="927" stroke="#d6dee8"/>
+<text x="55" y="958" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="normal" text-anchor="start">Source: NYC Open Data 311 service requests</text>
 </svg>

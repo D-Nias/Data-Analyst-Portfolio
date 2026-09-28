@@ -1,20 +1,38 @@
-# Entry-level data analytics portfolio
+# E-commerce purchase behavior
 
-![Bar charts comparing purchase rates by visitor type and product-page browsing depth](chart.svg)
+![Purchase-rate comparisons by visitor type and product-page browsing depth](chart.svg)
 
-Open `index.html` for the finished case study. The project uses the [UCI Online Shoppers Purchasing Intention dataset](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset) (12,330 sessions; CC BY 4.0). Source credit: Sakar, C. & Kastro, Y. (2018), DOI: 10.24432/C5F88Q.
+## Executive brief
 
-## What this project demonstrates
+**Decision question:** Where should an e-commerce team look first for purchase-rate improvement?
 
-- A defined business question and practical recommendation
-- Data quality checks and documented limitations
-- Reproducible analysis in Python and SQL
-- Clear communication through a standalone case-study page
+**Finding:** New visitors purchased in **24.91%** of sessions versus **13.93%** for returning visitors, a **10.98 percentage-point gap**. The gap remains about **10.85 points** after comparing months on a common month mix (excluding February, which has only one new-visitor session). This is a descriptive lead, not a causal result.
+
+**Recommended next action:** Audit the returning-visitor journey by acquisition source and device, then test one specific change such as clearer product re-entry or cart messaging. Define purchase rate as the primary outcome and monitor guardrails such as average order value and bounce rate.
+
+## Analysis design
+
+The [UCI Online Shoppers Purchasing Intention dataset](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset) contains **12,330 sessions**. Each row is a session, and `Revenue = TRUE` is treated as a session ending in purchase. The core KPI is **purchasing sessions ÷ all sessions** in a segment. The overall rate is **1,908 ÷ 12,330 = 15.47%**.
+
+| Visitor segment | Sessions | Purchasing sessions | Purchase rate |
+| --- | ---: | ---: | ---: |
+| New | 1,694 | 422 | 24.91% |
+| Returning | 10,551 | 1,470 | 13.93% |
+| Other | 85 | 16 | 18.82% |
+
+The approximate 95% interval for the **new-minus-returning rate gap** is **8.82 to 13.14 percentage points**, using a simple independent-proportions standard error. It describes sampling uncertainty under that assumption; it does not remove campaign, product, or intent differences between segments.
+
+Product-page browsing depth also tracks with purchase rate: **4.31%** for 0–5 pages, **13.22%** for 6–20, **19.88%** for 21–50, **22.04%** for 51–100, and **31.67%** for 101+. This supports a product-discovery investigation, but forcing more page views is not a justified recommendation. Buyers may browse more because they already intend to buy.
+
+## Quality and interpretation checks
+
+- The CSV has **no blank fields**. It has **125 rows with identical feature values**; they remain because equal values do not prove duplicate sessions and the source describes sessions from distinct users.
+- February has just **one new-visitor session**, so it is excluded from the month-standardized comparison. The other nine reported months have at least 30 new-visitor sessions.
+- The dataset has no transaction amount, marketing spend, full timestamp, or experiment assignment. It cannot quantify revenue lift, ROI, or causal impact.
+- The 85-session `Other` visitor segment is too small to anchor a recommendation.
 
 ## Reproduce
 
-The original CSV is in `data/online_shoppers_intention.csv`. Run `python analyze.py` from this folder to print the core metrics. The script uses Python's standard library. `queries.sql` runs in SQLite after importing the CSV as a table named `sessions` (booleans should be imported as 0/1).
+Run `python analyze.py` in this folder. It uses only the standard library and the included `data/online_shoppers_intention.csv`. `queries.sql` provides the equivalent core segment checks for SQLite after importing the CSV as `sessions` and mapping Boolean values to 0/1. The standalone [case-study page](index.html) offers a quick visual narrative.
 
-## Honest use in applications
-
-This is a public-data practice project, not work for a client or employer. Review the code and be ready to explain each number before claiming this project as your own. Identical rows are retained because the source describes sessions from distinct users; identical attributes do not prove duplicate events. The dataset has no session timestamps, order values, marketing spend, or experiment assignments, so this analysis cannot establish causation, revenue lift, or ROI.
+**Source credit:** Sakar, C. & Kastro, Y. (2018), *Online Shoppers Purchasing Intention Dataset*, UCI Machine Learning Repository, DOI [10.24432/C5F88Q](https://doi.org/10.24432/C5F88Q), CC BY 4.0. This is a public-data practice analysis, not client or employer work.

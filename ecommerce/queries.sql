@@ -26,3 +26,14 @@ SELECT CASE WHEN ProductRelated <= 5 THEN '0-5'
 FROM sessions
 GROUP BY product_page_band
 ORDER BY MIN(ProductRelated);
+
+-- Inspect seasonality and visitor mix before interpreting the overall gap.
+SELECT Month,
+       VisitorType,
+       COUNT(*) AS sessions,
+       SUM(Revenue) AS purchasing_sessions,
+       ROUND(100.0 * AVG(Revenue), 2) AS purchase_rate_pct
+FROM sessions
+WHERE VisitorType IN ('New_Visitor', 'Returning_Visitor')
+GROUP BY Month, VisitorType
+ORDER BY Month, VisitorType;

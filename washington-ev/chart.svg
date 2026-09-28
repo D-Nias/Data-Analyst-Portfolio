@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="900" viewBox="0 0 1000 900" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img">
 <title>Washington EV registry snapshot</title><desc>298,916 Washington records · September 2026 download. Source: Washington State Department of Licensing</desc>
-<rect width="1000" height="900" fill="#ffffff"/>
+<rect width="1000" height="1000" fill="#ffffff"/>
 <rect width="1000" height="12" fill="#16876a"/>
 <text x="55" y="68" fill="#15243a" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="bold" text-anchor="start">Washington EV registry snapshot</text>
 <text x="55" y="102" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="normal" text-anchor="start">298,916 Washington records · September 2026 download</text>
@@ -13,6 +13,6 @@
 <text x="55" y="526" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="normal" text-anchor="start">Snohomish</text><rect x="55" y="536" width="690" height="24" rx="12" fill="#e8edf2"/><rect x="55" y="536" width="174.0" height="24" rx="12" fill="#16876a"/><text x="763" y="556" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold" text-anchor="start">37,818</text>
 <text x="55" y="588" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="normal" text-anchor="start">Pierce</text><rect x="55" y="598" width="690" height="24" rx="12" fill="#e8edf2"/><rect x="55" y="598" width="115.2" height="24" rx="12" fill="#16876a"/><text x="763" y="618" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold" text-anchor="start">25,042</text>
 <text x="55" y="697" fill="#647285" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="normal" text-anchor="start">Raw counts; these are not county adoption rates</text>
-<line x1="55" y1="827" x2="945" y2="827" stroke="#d6dee8"/>
-<text x="55" y="858" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="normal" text-anchor="start">Source: Washington State Department of Licensing</text>
+<line x1="55" y1="927" x2="945" y2="927" stroke="#d6dee8"/>
+<text x="55" y="958" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="normal" text-anchor="start">Source: Washington State Department of Licensing</text>
 </svg>

@@ -33,6 +33,15 @@ for r in records:
 print("Requests:", len(records))
 print("Missing close date:", missing_close)
 print("Negative duration excluded from medians:", negative_duration)
+def percentile(values, fraction):
+    ordered = sorted(values)
+    pos = (len(ordered) - 1) * fraction
+    lo = int(pos)
+    hi = min(lo + 1, len(ordered) - 1)
+    return ordered[lo] + (ordered[hi] - ordered[lo]) * (pos - lo)
+
 for kind, n in counts.most_common(10):
     print(kind, "requests=", n, "closed_date_present=", closed[kind],
-          "median_closure_hours=", round(median(hours[kind]), 2) if hours[kind] else "N/A")
+          "close_date_rate=", round(100 * closed[kind] / n, 2),
+          "median_closure_hours=", round(median(hours[kind]), 2) if hours[kind] else "N/A",
+          "p90_closure_hours=", round(percentile(hours[kind], .9), 2) if hours[kind] else "N/A")

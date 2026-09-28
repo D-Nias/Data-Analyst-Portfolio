@@ -1,9 +1,10 @@
 """Analyze Washington's current EV registry snapshot (Python standard library)."""
 import csv
+import sys
 from collections import Counter
 from pathlib import Path
 
-path = Path(__file__).parent / "data" / "ev_population.csv"
+path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).parent / "data" / "ev_population.csv"
 if not path.exists():
     raise SystemExit("Download the source CSV from https://data.wa.gov/d/f6w7-q2d2 into data/ev_population.csv")
 
@@ -33,3 +34,6 @@ print("Vehicle types:", types.most_common())
 print("Top counties:", counties.most_common(10))
 print("Top makes:", makes.most_common(10))
 print("Model years 2023-2027:", [(y, years[str(y)]) for y in range(2023, 2028)])
+print("BEV share:", round(100 * types["Battery Electric Vehicle (BEV)"] / wa_rows, 2), "%")
+print("Top-three county share:", round(100 * sum(n for _, n in counties.most_common(3)) / wa_rows, 2), "%")
+print("Top-five county share:", round(100 * sum(n for _, n in counties.most_common(5)) / wa_rows, 2), "%")

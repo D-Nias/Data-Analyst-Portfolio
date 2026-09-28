@@ -2,20 +2,36 @@
 
 ![Bar charts showing battery-electric share and Washington counties with the most registered EVs](chart.svg)
 
-**Question:** Where are registered electric vehicles concentrated in Washington, and what is their vehicle-type mix?
+## Executive brief
 
-**Source:** [Washington State Department of Licensing, Electric Vehicle Population Data](https://data.wa.gov/d/f6w7-q2d2), accessed September 28, 2026. Public data, [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/). This repository credits the original data provider and links to the current source.
+**Decision question:** Which Washington markets merit deeper investigation for EV charging investment?
 
-## Results from the September 28, 2026 download
+**Finding:** Of **298,916** Washington-registered EVs in this snapshot, **80.67%** are battery electric. King, Snohomish, and Pierce together account for **69.29%** of the state's registered EVs. Concentration identifies where potential demand is large; it does not establish charging gaps or site economics.
 
-- 299,705 records in the full source file; 298,916 have `State = WA`.
-- The Washington subset has 298,916 distinct DOL vehicle IDs.
-- 241,125 battery-electric vehicles (80.67%) and 57,791 plug-in hybrids (19.33%).
-- King County has 144,257 registrations (48.26% of the Washington subset), followed by Snohomish (37,818) and Pierce (25,042).
-- Tesla is the most common make in this snapshot, with 122,573 registrations (41.00%).
+**Recommended next action:** Shortlist those three counties for a second-stage analysis combining charger locations, EVs per charger, total vehicle registrations, traffic flows, and site feasibility. Compare candidate neighborhoods within counties before choosing a station location.
 
-## Method and limits
+## Analysis design
 
-The unit is a **registered vehicle in the current snapshot**, not a sale. Counts by model year therefore do **not** represent annual sales or adoption. This file includes records outside Washington, so the analysis filters to `State = WA`. County shares are counts of registered EVs, not adoption rates; population or total vehicle registrations would be needed for fair county comparisons. The source changes over time, so rerunning the script against a later download can yield different counts.
+The [Washington State Department of Licensing EV population file](https://data.wa.gov/d/f6w7-q2d2) is a **current registration snapshot**. The September 28, 2026 download has **299,705** records, of which **298,916** have `State = WA`. The Washington subset has **298,916 distinct DOL vehicle IDs**, so the count uses one row per recorded vehicle ID.
 
-The full CSV is about 82 MB and is intentionally excluded from the upload. Download the source CSV from the data portal and save it as `data/ev_population.csv`, then run `python analyze.py` from this folder. The script uses only Python's standard library.
+| County | Registered EVs | Share of WA EVs | Battery-electric share within county |
+| --- | ---: | ---: | ---: |
+| King | 144,257 | 48.26% | 82.80% |
+| Snohomish | 37,818 | 12.65% | 84.37% |
+| Pierce | 25,042 | 8.38% | 78.75% |
+| Clark | 18,782 | 6.28% | 77.23% |
+
+Statewide, **241,125** vehicles are battery electric and **57,791** are plug-in hybrid. Tesla is the largest make at **122,573** records, or about **41.00%** of the Washington subset. The top five counties account for **79.25%** of registered EVs.
+
+## Quality and interpretation checks
+
+- The `State = WA` filter removes **789** out-of-state records before calculating statewide shares.
+- Model year describes the vehicle, not when it was sold or registered. Model-year counts are **not** annual adoption or sales figures.
+- County EV counts are **not adoption rates**. That would require a denominator such as total registered vehicles or population.
+- The source changes over time. These figures describe the dated download, not a permanent total.
+
+## Reproduce
+
+The full CSV is about 82 MB and is excluded from the repository. Download it from the [data portal](https://data.wa.gov/d/f6w7-q2d2), save it as `data/ev_population.csv`, and run `python analyze.py`. The script uses only Python's standard library. You can also pass an alternate CSV path as its first argument. `queries.sql` shows equivalent registry checks in SQLite. The [case-study page](index.html) gives a quick visual summary.
+
+**Source:** Washington State Department of Licensing, *Electric Vehicle Population Data*, accessed September 28, 2026, [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/). This is a public-data practice analysis, not client or employer work.

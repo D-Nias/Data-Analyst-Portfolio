@@ -1,5 +1,6 @@
 """Reproduce the e-commerce portfolio metrics using the Python standard library."""
 import csv
+import math
 from collections import defaultdict
 from pathlib import Path
 
@@ -19,6 +20,7 @@ def report(label, groups):
         print(f"{key}: sessions={rate(group)[0]}, purchases={rate(group)[1]}, purchase_rate={rate(group)[2]}%")
 
 print(f"Rows: {len(rows)}; blank fields: {sum(not value for row in rows for value in row.values())}")
+print("Identical feature rows retained:", len(rows) - len({tuple(row.items()) for row in rows}))
 print(f"Overall: {rate(rows)} (sessions, purchases, purchase rate %)")
 
 by_visitor = defaultdict(list)
@@ -34,3 +36,30 @@ for row in rows:
 report("Visitor type", by_visitor)
 report("Product pages visited", by_pages)
 report("Month", by_month)
+
+new = by_visitor["New_Visitor"]
+returning = by_visitor["Returning_Visitor"]
+p_new = rate(new)[1] / len(new)
+p_returning = rate(returning)[1] / len(returning)
+gap = p_new - p_returning
+se = math.sqrt(p_new * (1 - p_new) / len(new) + p_returning * (1 - p_returning) / len(returning))
+print(f"\nNew minus returning: {100 * gap:.2f} percentage points")
+print(f"Approximate 95% interval for descriptive gap: {100 * (gap - 1.96 * se):.2f} to {100 * (gap + 1.96 * se):.2f} points")
+
+eligible_months = []
+month_groups = defaultdict(lambda: defaultdict(list))
+for row in rows:
+    month_groups[row["Month"]][row["VisitorType"]].append(row)
+for month, groups in month_groups.items():
+    if len(groups["New_Visitor"]) >= 30 and groups["Returning_Visitor"]:
+        eligible_months.append(month)
+total_weight = sum(len(by_month[m]) for m in eligible_months)
+standardized = {}
+for visitor in ("New_Visitor", "Returning_Visitor"):
+    standardized[visitor] = sum(
+        len(by_month[m]) / total_weight * rate(month_groups[m][visitor])[1] / len(month_groups[m][visitor])
+        for m in eligible_months
+    )
+print("Months with >=30 new visitors:", len(eligible_months))
+print(f"Month-standardized new rate: {100 * standardized['New_Visitor']:.2f}%")
+print(f"Month-standardized returning rate: {100 * standardized['Returning_Visitor']:.2f}%")

@@ -1,15 +1,17 @@
 # David L Nias — Data Analytics Portfolio
 
-Three reproducible, public-data projects focused on clear business questions, data checks, and honest interpretation.
+Three public-data case studies focused on business decisions, reproducible calculations, data quality, and clear limits on what the evidence can support.
 
-| Project | Question | Files |
+| Project | Decision question | Key result |
 | --- | --- | --- |
-| [E-commerce purchase behavior](ecommerce/index.html) | Which session characteristics are associated with purchasing? | Case study, Python, SQL, credited UCI CSV |
-| [Washington EV registry](washington-ev/index.html) | Where are registered EVs concentrated? | Case study, Python, source link and method notes |
-| [NYC 311 service operations](nyc-311/index.html) | Which request types drive volume and have longer closure times? | Case study, Python, SQL, source extract |
+| [E-commerce purchase behavior](ecommerce/README.md) | Where should a commerce team investigate purchase-rate improvement? | New visitors purchased at 24.91% versus 13.93% for returning visitors; the gap remains after a month-mix check. |
+| [Washington EV registry](washington-ev/README.md) | Which markets warrant deeper charging-demand research? | King, Snohomish, and Pierce hold 69.29% of Washington's registered EVs in the snapshot. |
+| [NYC 311 service operations](nyc-311/README.md) | Which request types drive workload and long closure tails? | Illegal Parking led volume at 13,694 requests; long-cycle categories show much higher medians and 90th percentiles. |
 
-These are public-data practice projects, not client or employer work. The repository excludes personal contact information and the large Washington CSV; the source and reproduction instructions are in each project.
+## How to read these projects
 
-The HTML pages can be opened locally. Source data and methods are credited in the project READMEs.
+Each project page opens with a chart and an executive brief, then explains the KPI definitions, checks, recommendation, limitations, and reproduction steps. Python analyses use only the standard library; SQL examples show the core grouping and validation logic. Standalone HTML pages provide a presentation view.
 
-Each project README includes a chart that displays directly on GitHub.
+`build_charts.py` regenerates the GitHub charts from the dated, verified summary figures. Each project's `analyze.py` shows how those figures were calculated from source data.
+
+The projects are public-data practice analyses, not client or employer work. Data sources and licenses are credited in their respective READMEs. The Washington source CSV is omitted because it is about 82 MB; its download instructions are included. No personal contact information is stored here.
