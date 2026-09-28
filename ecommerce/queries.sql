@@ -1,0 +1,28 @@
+-- Import data/online_shoppers_intention.csv into SQLite as sessions.
+-- Convert Revenue to 1 for TRUE and 0 for FALSE during import.
+-- Keep all source rows; identical feature vectors are not proven duplicates.
+
+SELECT COUNT(*) AS sessions,
+       SUM(Revenue) AS purchasing_sessions,
+       ROUND(100.0 * AVG(Revenue), 2) AS purchase_rate_pct
+FROM sessions;
+
+SELECT VisitorType,
+       COUNT(*) AS sessions,
+       SUM(Revenue) AS purchasing_sessions,
+       ROUND(100.0 * AVG(Revenue), 2) AS purchase_rate_pct
+FROM sessions
+GROUP BY VisitorType
+ORDER BY sessions DESC;
+
+SELECT CASE WHEN ProductRelated <= 5 THEN '0-5'
+            WHEN ProductRelated <= 20 THEN '6-20'
+            WHEN ProductRelated <= 50 THEN '21-50'
+            WHEN ProductRelated <= 100 THEN '51-100'
+            ELSE '101+' END AS product_page_band,
+       COUNT(*) AS sessions,
+       SUM(Revenue) AS purchasing_sessions,
+       ROUND(100.0 * AVG(Revenue), 2) AS purchase_rate_pct
+FROM sessions
+GROUP BY product_page_band
+ORDER BY MIN(ProductRelated);
