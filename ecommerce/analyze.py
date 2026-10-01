@@ -26,16 +26,21 @@ print(f"Overall: {rate(rows)} (sessions, purchases, purchase rate %)")
 by_visitor = defaultdict(list)
 by_month = defaultdict(list)
 by_pages = defaultdict(list)
+by_visitor_weekend = defaultdict(list)
 for row in rows:
     by_visitor[row["VisitorType"]].append(row)
     by_month[row["Month"]].append(row)
     pages = int(row["ProductRelated"])
     bucket = "0–5" if pages <= 5 else "6–20" if pages <= 20 else "21–50" if pages <= 50 else "51–100" if pages <= 100 else "101+"
     by_pages[bucket].append(row)
+    by_visitor_weekend[(row["VisitorType"], row["Weekend"])].append(row)
 
 report("Visitor type", by_visitor)
 report("Product pages visited", by_pages)
 report("Month", by_month)
+print("\nVisitor type by weekend")
+for (visitor, weekend), group in sorted(by_visitor_weekend.items()):
+    print(f"{visitor}, weekend={weekend}: sessions={rate(group)[0]}, purchases={rate(group)[1]}, purchase_rate={rate(group)[2]}%")
 
 new = by_visitor["New_Visitor"]
 returning = by_visitor["Returning_Visitor"]
@@ -63,3 +68,20 @@ for visitor in ("New_Visitor", "Returning_Visitor"):
 print("Months with >=30 new visitors:", len(eligible_months))
 print(f"Month-standardized new rate: {100 * standardized['New_Visitor']:.2f}%")
 print(f"Month-standardized returning rate: {100 * standardized['Returning_Visitor']:.2f}%")
+
+print("\nWeekend minus weekday rate within visitor type")
+for visitor in ("New_Visitor", "Returning_Visitor"):
+    weekday = by_visitor_weekend[(visitor, "FALSE")]
+    weekend = by_visitor_weekend[(visitor, "TRUE")]
+    p_weekday = rate(weekday)[1] / len(weekday)
+    p_weekend = rate(weekend)[1] / len(weekend)
+    difference = p_weekend - p_weekday
+    difference_se = math.sqrt(
+        p_weekday * (1 - p_weekday) / len(weekday)
+        + p_weekend * (1 - p_weekend) / len(weekend)
+    )
+    print(
+        f"{visitor}: {100 * difference:.2f} points "
+        f"(approx. 95% interval {100 * (difference - 1.96 * difference_se):.2f} to "
+        f"{100 * (difference + 1.96 * difference_se):.2f})"
+    )

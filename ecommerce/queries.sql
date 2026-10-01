@@ -37,3 +37,14 @@ FROM sessions
 WHERE VisitorType IN ('New_Visitor', 'Returning_Visitor')
 GROUP BY Month, VisitorType
 ORDER BY Month, VisitorType;
+
+-- Check whether the weekend pattern differs by visitor type.
+SELECT VisitorType,
+       Weekend,
+       COUNT(*) AS sessions,
+       SUM(Revenue) AS purchasing_sessions,
+       ROUND(100.0 * AVG(Revenue), 2) AS purchase_rate_pct
+FROM sessions
+WHERE VisitorType IN ('New_Visitor', 'Returning_Visitor')
+GROUP BY VisitorType, Weekend
+ORDER BY VisitorType, Weekend;

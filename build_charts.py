@@ -52,3 +52,8 @@ chart(ROOT/'nyc-311'/'chart.svg',
       [('Highest-volume request types', [('Illegal Parking', 13694, '13,694'), ('Noise – Residential', 8141, '8,141'), ('Blocked Driveway', 3947, '3,947')], 'Number of requests', 155, 15000),
        ('Median recorded time to close', [('Illegal Parking', 1.64, '1.64 h'), ('Damaged Tree', 47.77, '47.77 h'), ('Unsanitary Condition', 174.38, '174.38 h')], 'Valid closed requests only; closure does not imply physical repair', 455, 190)],
       'Source: NYC Open Data 311 service requests', '#8059b1')
+
+chart(ROOT/'ecommerce'/'visitor-weekend.svg',
+      'Weekend patterns differ by visitor type', 'Purchase rate by visitor segment and session day',
+      [('Sessions ending in purchase', [('New · weekday', 26.09, '26.09%'), ('New · weekend', 21.92, '21.92%'), ('Returning · weekday', 13.18, '13.18%'), ('Returning · weekend', 16.50, '16.50%')], 'Weekend minus weekday: new −4.17 points; returning +3.31 points', 170, 30)],
+      'Descriptive comparison only; campaign and intent differences may remain', '#11877f')

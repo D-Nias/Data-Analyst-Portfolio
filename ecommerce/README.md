@@ -24,15 +24,28 @@ The approximate 95% interval for the **new-minus-returning rate gap** is **8.82 
 
 Product-page browsing depth also tracks with purchase rate: **4.31%** for 0–5 pages, **13.22%** for 6–20, **19.88%** for 21–50, **22.04%** for 51–100, and **31.67%** for 101+. This supports a product-discovery investigation, but forcing more page views is not a justified recommendation. Buyers may browse more because they already intend to buy.
 
+### A segment interaction changes the story
+
+![Weekend and weekday purchase rates, split by visitor type](visitor-weekend.svg)
+
+The weekend pattern differs by visitor type. New visitors purchased in **26.09%** of weekday sessions and **21.92%** of weekend sessions. Returning visitors purchased in **13.18%** of weekday sessions and **16.50%** of weekend sessions. Approximate 95% intervals for the weekend-minus-weekday differences are **−8.62 to +0.28 points** for new visitors and **+1.65 to +4.98 points** for returning visitors. This points toward testing visitor-specific timing or messaging, not applying a single weekend rule to everyone.
+
 ## Quality and interpretation checks
 
 - The CSV has **no blank fields**. It has **125 rows with identical feature values**; they remain because equal values do not prove duplicate sessions and the source describes sessions from distinct users.
 - February has just **one new-visitor session**, so it is excluded from the month-standardized comparison. The other nine reported months have at least 30 new-visitor sessions.
 - The dataset has no transaction amount, marketing spend, full timestamp, or experiment assignment. It cannot quantify revenue lift, ROI, or causal impact.
 - The 85-session `Other` visitor segment is too small to anchor a recommendation.
+- The weekend differences are observational and may reflect differences in traffic source, device mix, or shopper intent. They motivate a segmented experiment; they do not establish a weekend effect.
 
 ## Reproduce
 
 Run `python analyze.py` in this folder. It uses only the standard library and the included `data/online_shoppers_intention.csv`. `queries.sql` provides the equivalent core segment checks for SQLite after importing the CSV as `sessions` and mapping Boolean values to 0/1. The standalone [case-study page](index.html) offers a quick visual narrative.
+
+## Review iterations
+
+- Added an inline chart after portfolio feedback that the findings should be easier to scan.
+- Checked whether the new-versus-returning visitor gap was driven by the dataset's month mix; the gap remained similar across the nine months with enough new-visitor sessions.
+- Split weekend patterns by visitor type. The directions differ, so the recommended next step now calls for a segment-specific test instead of a single broad change.
 
 **Source credit:** Sakar, C. & Kastro, Y. (2018), *Online Shoppers Purchasing Intention Dataset*, UCI Machine Learning Repository, DOI [10.24432/C5F88Q](https://doi.org/10.24432/C5F88Q), CC BY 4.0. This is a public-data practice analysis, not client or employer work.
