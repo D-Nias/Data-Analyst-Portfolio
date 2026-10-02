@@ -27,6 +27,7 @@ by_visitor = defaultdict(list)
 by_month = defaultdict(list)
 by_pages = defaultdict(list)
 by_visitor_weekend = defaultdict(list)
+by_visitor_traffic = defaultdict(list)
 for row in rows:
     by_visitor[row["VisitorType"]].append(row)
     by_month[row["Month"]].append(row)
@@ -34,6 +35,7 @@ for row in rows:
     bucket = "0–5" if pages <= 5 else "6–20" if pages <= 20 else "21–50" if pages <= 50 else "51–100" if pages <= 100 else "101+"
     by_pages[bucket].append(row)
     by_visitor_weekend[(row["VisitorType"], row["Weekend"])].append(row)
+    by_visitor_traffic[(row["VisitorType"], row["TrafficType"])].append(row)
 
 report("Visitor type", by_visitor)
 report("Product pages visited", by_pages)
@@ -85,3 +87,42 @@ for visitor in ("New_Visitor", "Returning_Visitor"):
         f"(approx. 95% interval {100 * (difference - 1.96 * difference_se):.2f} to "
         f"{100 * (difference + 1.96 * difference_se):.2f})"
     )
+
+traffic_types = sorted({traffic for _, traffic in by_visitor_traffic})
+eligible_traffic = [
+    traffic for traffic in traffic_types
+    if len(by_visitor_traffic[("New_Visitor", traffic)]) >= 30
+    and len(by_visitor_traffic[("Returning_Visitor", traffic)]) >= 30
+]
+pooled_sessions = sum(
+    len(by_visitor_traffic[(visitor, traffic)])
+    for traffic in eligible_traffic
+    for visitor in ("New_Visitor", "Returning_Visitor")
+)
+print("\nVisitor type by traffic category (eligible strata)")
+for traffic in eligible_traffic:
+    new_group = by_visitor_traffic[("New_Visitor", traffic)]
+    returning_group = by_visitor_traffic[("Returning_Visitor", traffic)]
+    print(
+        f"TrafficType={traffic}: new={rate(new_group)}, "
+        f"returning={rate(returning_group)}"
+    )
+standardized_traffic = {}
+for visitor in ("New_Visitor", "Returning_Visitor"):
+    standardized_traffic[visitor] = sum(
+        (len(by_visitor_traffic[("New_Visitor", traffic)])
+         + len(by_visitor_traffic[("Returning_Visitor", traffic)]))
+        / pooled_sessions
+        * rate(by_visitor_traffic[(visitor, traffic)])[1]
+        / len(by_visitor_traffic[(visitor, traffic)])
+        for traffic in eligible_traffic
+    )
+traffic_gap = standardized_traffic["New_Visitor"] - standardized_traffic["Returning_Visitor"]
+raw_gap = p_new - p_returning
+print(f"Eligible traffic categories: {len(eligible_traffic)}; pooled sessions: {pooled_sessions}")
+print(f"Raw new-minus-returning gap: {100 * raw_gap:.2f} percentage points")
+print(
+    f"Traffic-mix-standardized new rate: {100 * standardized_traffic['New_Visitor']:.2f}%; "
+    f"returning rate: {100 * standardized_traffic['Returning_Visitor']:.2f}%; "
+    f"gap: {100 * traffic_gap:.2f} percentage points"
+)

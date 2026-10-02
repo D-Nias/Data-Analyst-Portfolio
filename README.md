@@ -4,7 +4,7 @@ Three public-data case studies focused on business decisions, reproducible calcu
 
 | Project | Decision question | Key result |
 | --- | --- | --- |
-| [E-commerce purchase behavior](ecommerce/README.md) | Where should a commerce team investigate purchase-rate improvement? | New visitors purchased at 24.91% versus 13.93% for returning visitors; the gap remains after a month-mix check. |
+| [E-commerce purchase behavior](ecommerce/README.md) | Where should a commerce team investigate purchase-rate improvement? | New visitors purchased at 24.91% versus 13.93% for returning visitors; the difference narrows to 8.25 points after a common traffic-mix check. |
 | [Washington EV registry](washington-ev/README.md) | Which markets warrant deeper charging-demand research? | King, Snohomish, and Pierce hold 69.29% of Washington's registered EVs in the snapshot. |
 | [NYC 311 service operations](nyc-311/README.md) | Which request types drive workload and long closure tails? | Illegal Parking led volume at 13,694 requests; long-cycle categories show much higher medians and 90th percentiles. |
 

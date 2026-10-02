@@ -48,3 +48,27 @@ FROM sessions
 WHERE VisitorType IN ('New_Visitor', 'Returning_Visitor')
 GROUP BY VisitorType, Weekend
 ORDER BY VisitorType, Weekend;
+
+-- Standardize new and returning purchase rates to the same mix of traffic categories.
+-- Include only categories with at least 30 sessions in each visitor group.
+WITH traffic_strata AS (
+    SELECT TrafficType,
+           SUM(CASE WHEN VisitorType = 'New_Visitor' THEN 1 ELSE 0 END) AS new_sessions,
+           SUM(CASE WHEN VisitorType = 'New_Visitor' THEN Revenue ELSE 0 END) AS new_purchases,
+           SUM(CASE WHEN VisitorType = 'Returning_Visitor' THEN 1 ELSE 0 END) AS returning_sessions,
+           SUM(CASE WHEN VisitorType = 'Returning_Visitor' THEN Revenue ELSE 0 END) AS returning_purchases
+    FROM sessions
+    WHERE VisitorType IN ('New_Visitor', 'Returning_Visitor')
+    GROUP BY TrafficType
+), eligible AS (
+    SELECT *
+    FROM traffic_strata
+    WHERE new_sessions >= 30 AND returning_sessions >= 30
+)
+SELECT COUNT(*) AS eligible_traffic_categories,
+       SUM(new_sessions + returning_sessions) AS pooled_sessions,
+       ROUND(100.0 * SUM((new_sessions + returning_sessions) * (1.0 * new_purchases / new_sessions))
+             / SUM(new_sessions + returning_sessions), 2) AS standardized_new_rate_pct,
+       ROUND(100.0 * SUM((new_sessions + returning_sessions) * (1.0 * returning_purchases / returning_sessions))
+             / SUM(new_sessions + returning_sessions), 2) AS standardized_returning_rate_pct
+FROM eligible;

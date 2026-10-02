@@ -57,3 +57,8 @@ chart(ROOT/'ecommerce'/'visitor-weekend.svg',
       'Weekend patterns differ by visitor type', 'Purchase rate by visitor segment and session day',
       [('Sessions ending in purchase', [('New · weekday', 26.09, '26.09%'), ('New · weekend', 21.92, '21.92%'), ('Returning · weekday', 13.18, '13.18%'), ('Returning · weekend', 16.50, '16.50%')], 'Weekend minus weekday: new −4.17 points; returning +3.31 points', 170, 30)],
       'Descriptive comparison only; campaign and intent differences may remain', '#11877f')
+
+chart(ROOT/'ecommerce'/'visitor-traffic.svg',
+      'Traffic mix explains part of the visitor gap', 'New-minus-returning purchase-rate difference · percentage points',
+      [('Visitor-rate gap', [('Raw comparison', 10.98, '10.98 points'), ('Common traffic mix', 8.25, '8.25 points')], 'Standardized over 8 categories with at least 30 sessions per visitor group', 180, 12)],
+      'Common mix weights use pooled sessions across eligible categories · n=10,750', '#11877f')
