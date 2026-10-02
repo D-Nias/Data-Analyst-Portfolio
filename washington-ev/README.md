@@ -38,6 +38,7 @@ Statewide, **241,125** vehicles are battery electric and **57,791** are plug-in 
 ## Quality and interpretation checks
 
 - The `State = WA` filter removes **789** out-of-state records before calculating statewide shares.
+- The reproduction script reports blank vehicle IDs, repeated nonblank IDs, blank counties, and blank vehicle-type fields separately. The SQL quality query uses the same checks; blank IDs are not counted as distinct vehicles.
 - Model year describes the vehicle, not when it was sold or registered. Model-year counts are **not** annual adoption or sales figures.
 - County EV counts are **not adoption rates**. That would require a denominator such as total registered vehicles or population.
 - The source changes over time. These figures describe the dated download, not a permanent total.
