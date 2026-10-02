@@ -10,6 +10,18 @@
 
 **Recommended next action:** Shortlist those three counties for a second-stage analysis combining charger locations, EVs per charger, total vehicle registrations, traffic flows, and site feasibility. Compare candidate neighborhoods within counties before choosing a station location.
 
+### Proposed second-stage screening
+
+The registry supports a county-level starting point, not a charger investment ranking. I would add these measures before advancing a market:
+
+| Measure | Definition | Additional data and decision use |
+| --- | --- | --- |
+| EV adoption context | Registered EVs ÷ all registered passenger vehicles × 1,000 | A same-date vehicle-registration denominator distinguishes a large county from a county with a high EV share. |
+| Public charging supply | Public charging ports ÷ registered EVs × 1,000, split by Level 2 and DC fast charging | A dated public-charger inventory provides a first-pass supply comparison. Port counts do not show utilization, uptime, or home charging access. |
+| Candidate-area screen | EVs and traffic activity within a defined drive-time area, alongside site and grid feasibility | Finer-grained geography, traffic counts, candidate parcels, and utility capacity are needed to assess specific locations. County totals alone cannot select a site. |
+
+I would first verify that the vehicle and charger snapshots align in time and geography. Counties would advance only as candidates for neighborhood-level research; the current registry does not show an unmet charging need or forecast station performance.
+
 ## Analysis design
 
 The [Washington State Department of Licensing EV population file](https://data.wa.gov/d/f6w7-q2d2) is a **current registration snapshot**. The September 28, 2026 download has **299,705** records, of which **298,916** have `State = WA`. The Washington subset has **298,916 distinct DOL vehicle IDs**, so the count uses one row per recorded vehicle ID.
