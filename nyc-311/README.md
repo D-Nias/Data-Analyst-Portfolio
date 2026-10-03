@@ -28,12 +28,13 @@ The long tail matters: for Damaged Tree, the 90th percentile among valid closed 
 - **3,649** requests have no close date. **14** have a close timestamp before the creation timestamp; those 14 are excluded from duration summaries.
 - `closed_date` is an administrative system event. It is not proof of physical repair or resident satisfaction.
 - Open requests are missing from the duration percentiles. This can make slower categories look faster, so coverage appears beside duration.
+- The included seven-column extract omits `descriptor`, so it cannot isolate potholes from the broader `Street Condition` category. The Python script calls this out instead of treating all street-condition requests as potholes. With an extract that includes the source's descriptor field, it reports pothole volume, close-date coverage, average, median, and 90th percentile for the same creation-date cohort.
 - This is one week, not an annual average. NYC updates the source daily, and fields can change after extraction.
 - Borough comparisons require controlling for complaint mix and agency workflow before drawing performance conclusions.
 
 ## Reproduce
 
-Run `python analyze.py` in this folder; it uses only Python's standard library and the included [seven-column extract](data/requests_2026_06_01_to_07.csv). `queries.sql` provides SQLite checks. The extract omits addresses and other location details. It came from the NYC Socrata API with this creation-date filter:
+Run `python analyze.py` in this folder; it uses only Python's standard library and the included [seven-column extract](data/requests_2026_06_01_to_07.csv). To analyze a filtered extract that also includes `descriptor`, pass its path as an argument: `python analyze.py path/to/requests_with_descriptor.csv`. `queries.sql` provides SQLite checks. The included extract omits addresses, location details, and the descriptor field; the source schema documents [Problem Detail (`descriptor`)](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9/about_data). It came from the NYC Socrata API with this creation-date filter:
 
 ```text
 created_date >= '2026-06-01T00:00:00' and created_date < '2026-06-08T00:00:00'
