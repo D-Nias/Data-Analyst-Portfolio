@@ -1,0 +1,93 @@
+{
+  "as_of_date": "2026-09-30",
+  "synthetic": true,
+  "total_members": 720,
+  "total_events": 1453,
+  "quality_checks": {
+    "duplicate_member_ids": 0,
+    "duplicate_event_ids": 0,
+    "orphan_events": 0,
+    "events_before_enrollment": 0,
+    "events_after_as_of": 0,
+    "missing_required_values": 0
+  },
+  "monthly_enrollments": {
+    "2026-01": 88,
+    "2026-02": 89,
+    "2026-03": 101,
+    "2026-04": 71,
+    "2026-05": 100,
+    "2026-06": 77,
+    "2026-07": 89,
+    "2026-08": 105
+  },
+  "activation": {
+    "eligible": 720,
+    "completed": 442,
+    "rate_pct": 61.4,
+    "median_event_day": 3.0,
+    "maturity_days": 7,
+    "window_days": [
+      0,
+      7
+    ]
+  },
+  "day30": {
+    "eligible": 691,
+    "completed": 485,
+    "rate_pct": 70.2,
+    "median_event_day": 33,
+    "maturity_days": 37,
+    "window_days": [
+      28,
+      37
+    ]
+  },
+  "day60": {
+    "eligible": 576,
+    "completed": 366,
+    "rate_pct": 63.5,
+    "median_event_day": 67.0,
+    "maturity_days": 74,
+    "window_days": [
+      60,
+      74
+    ]
+  },
+  "by_channel": {
+    "Direct": {
+      "activation": {
+        "eligible": 511,
+        "completed": 320,
+        "rate_pct": 62.6
+      },
+      "day30": {
+        "eligible": 490,
+        "completed": 335,
+        "rate_pct": 68.4
+      },
+      "day60": {
+        "eligible": 403,
+        "completed": 247,
+        "rate_pct": 61.3
+      }
+    },
+    "Employer": {
+      "activation": {
+        "eligible": 209,
+        "completed": 122,
+        "rate_pct": 58.4
+      },
+      "day30": {
+        "eligible": 201,
+        "completed": 150,
+        "rate_pct": 74.6
+      },
+      "day60": {
+        "eligible": 173,
+        "completed": 119,
+        "rate_pct": 68.8
+      }
+    }
+  }
+}

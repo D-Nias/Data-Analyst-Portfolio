@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Care Operations Scorecard | Analytics Portfolio</title>
+<style>
+:root{font-family:Inter,Arial,sans-serif;color:#20333c;background:#f3f7f7}*{box-sizing:border-box}body{margin:0}header{background:#163d42;color:#fff;padding:58px max(22px,calc((100vw - 1080px)/2)) 48px}main{max-width:1080px;margin:auto;padding:28px 22px 72px}h1{font-size:clamp(34px,5vw,54px);line-height:1.05;margin:14px 0}h2{font-size:24px;margin:0 0 14px}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:#97e0d4}.lead{max-width:760px;font-size:18px;line-height:1.65;color:#deeeee}.badge{display:inline-block;margin-top:12px;padding:9px 13px;border-radius:8px;background:#fff1d2;color:#634b1d;font-weight:800;font-size:12px;letter-spacing:.04em}.panel{background:#fff;border:1px solid #dde8e8;border-radius:15px;padding:25px;margin:18px 0;box-shadow:0 6px 24px #18383d0c}.panel p{line-height:1.65}.chart{width:100%;height:auto;display:block}.note{background:#eff8f6;border-left:4px solid #17867d;padding:14px 17px;border-radius:5px}.muted{color:#5c7074}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;vertical-align:top;padding:12px 10px;border-bottom:1px solid #e1e9e8;line-height:1.5}th{color:#176a65;background:#f3f8f7}a{color:#146c68}@media(max-width:700px){.panel{padding:18px}table{font-size:12px}th,td{padding:9px 6px}}
+</style>
+</head>
+<body>
+<header><div class="eyebrow">Healthcare operations · Portfolio case study</div><h1>Are early care touchpoints happening on time?</h1><p class="lead">A reproducible scorecard for enrollment volume, onboarding contact, and early member touchpoints in a fictional digital care program.</p><span class="badge">SYNTHETIC DATA — not real member or company results</span></header>
+<main>
+<section class="panel"><h2>Operations scorecard</h2><img class="chart" src="scorecard.svg" alt="Synthetic cohort size, early touchpoint rates, monthly enrollments, and timing windows"><p class="muted">The scorecard uses mature cohorts, so each denominator has had the full follow-up window before the snapshot date.</p></section>
+<section class="panel"><h2>How a team could use this</h2><p>Operations can monitor enrollment and timely follow-up; coaching teams can investigate gaps by channel; data partners can reconcile event definitions and cohort cutoffs. In a real program, a persistent difference would prompt a workflow review before anyone assumes a cause.</p><p class="note"><strong>Interpretation:</strong> These generated rates demonstrate reporting logic only. The project has no clinical outcomes and makes no claim about a real health program.</p></section>
+<section class="panel"><h2>Metric definitions</h2><table><thead><tr><th>Measure</th><th>Definition</th><th>Eligibility window</th></tr></thead><tbody><tr><td>7-day first contact</td><td>Members with completed coach contact ÷ eligible enrollments</td><td>Contact day 0–7; enrolled by Sep 23, 2026.</td></tr><tr><td>Day-30 check-in</td><td>Members with completed day-30 check-in ÷ eligible enrollments</td><td>Event day 28–37; enrolled by Aug 24, 2026.</td></tr><tr><td>Day-60 activity</td><td>Members with observed activity ÷ eligible enrollments</td><td>Event day 60–74; enrolled by Jul 18, 2026. Engagement proxy only.</td></tr></tbody></table><p>See the <a href="README.md">case study</a>, <a href="queries.sql">SQL scorecard</a>, <a href="outputs/01a0e95f-1c5a-7e80-94bb-cdfd7e7facc1/member-care-scorecard.xlsx">Excel scorecard</a>, <a href="data_dictionary.md">data dictionary</a>, and <a href="analyze.py">reproducible analysis</a>.</p></section>
+</main>
+</body>
+</html>
+

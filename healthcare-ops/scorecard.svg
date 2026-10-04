@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="800" viewBox="0 0 1100 800" role="img">
+<title>Simulated digital care operations scorecard</title>
+<desc>Synthetic cohort enrollment, onboarding, milestone, and channel comparisons.</desc>
+<rect width="1100" height="800" fill="#ffffff"/><rect width="1100" height="10" fill="#137a73"/>
+<text x="44" y="58" font-family="Arial,Helvetica,sans-serif" font-size="28" fill="#15323b" font-weight="bold">Digital care operations scorecard</text>
+<text x="44" y="88" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#5d7078" font-weight="normal">Fictional dataset · Cohort through September 30, 2026</text>
+<rect x="44" y="112" width="1012" height="50" rx="10" fill="#fff5df"/>
+<text x="62" y="143" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#78541a" font-weight="bold">SYNTHETIC DATA — illustrative workflow metrics, not real member or company results</text>
+<rect x="44" y="184" width="238" height="112" rx="12" fill="#f4f8f9" stroke="#dce7e9"/>
+<text x="60" y="213" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#526970" font-weight="bold">Enrolled members</text>
+<text x="60" y="254" font-family="Arial,Helvetica,sans-serif" font-size="30" fill="#137a73" font-weight="bold">720</text>
+<text x="60" y="278" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#64777d" font-weight="normal">Jan–Aug 2026</text>
+<rect x="302" y="184" width="238" height="112" rx="12" fill="#f4f8f9" stroke="#dce7e9"/>
+<text x="318" y="213" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#526970" font-weight="bold">7-day first contact</text>
+<text x="318" y="254" font-family="Arial,Helvetica,sans-serif" font-size="30" fill="#137a73" font-weight="bold">61.4%</text>
+<text x="318" y="278" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#64777d" font-weight="normal">720 mature members</text>
+<rect x="560" y="184" width="238" height="112" rx="12" fill="#f4f8f9" stroke="#dce7e9"/>
+<text x="576" y="213" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#526970" font-weight="bold">Day-30 check-in</text>
+<text x="576" y="254" font-family="Arial,Helvetica,sans-serif" font-size="30" fill="#137a73" font-weight="bold">70.2%</text>
+<text x="576" y="278" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#64777d" font-weight="normal">691 mature members</text>
+<rect x="818" y="184" width="238" height="112" rx="12" fill="#f4f8f9" stroke="#dce7e9"/>
+<text x="834" y="213" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#526970" font-weight="bold">Day-60 activity</text>
+<text x="834" y="254" font-family="Arial,Helvetica,sans-serif" font-size="30" fill="#137a73" font-weight="bold">63.5%</text>
+<text x="834" y="278" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#64777d" font-weight="normal">576 mature members</text>
+<text x="44" y="346" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#15323b" font-weight="bold">Monthly enrollments</text>
+<text x="590" y="346" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#15323b" font-weight="bold">Rates by enrollment channel</text>
+<text x="44" y="393" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="normal">2026-01</text>
+<rect x="150" y="378" width="365" height="18" rx="9" fill="#e5edf0"/><rect x="150" y="378" width="305.9" height="18" rx="9" fill="#1d9a8e"/>
+<text x="535" y="393" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="bold">88</text>
+<text x="44" y="432" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="normal">2026-02</text>
+<rect x="150" y="417" width="365" height="18" rx="9" fill="#e5edf0"/><rect x="150" y="417" width="309.4" height="18" rx="9" fill="#1d9a8e"/>
+<text x="535" y="432" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="bold">89</text>
+<text x="44" y="471" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="normal">2026-03</text>
+<rect x="150" y="456" width="365" height="18" rx="9" fill="#e5edf0"/><rect x="150" y="456" width="351.1" height="18" rx="9" fill="#1d9a8e"/>
+<text x="535" y="471" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="bold">101</text>
+<text x="44" y="510" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="normal">2026-04</text>
+<rect x="150" y="495" width="365" height="18" rx="9" fill="#e5edf0"/><rect x="150" y="495" width="246.8" height="18" rx="9" fill="#1d9a8e"/>
+<text x="535" y="510" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="bold">71</text>
+<text x="44" y="549" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="normal">2026-05</text>
+<rect x="150" y="534" width="365" height="18" rx="9" fill="#e5edf0"/><rect x="150" y="534" width="347.6" height="18" rx="9" fill="#1d9a8e"/>
+<text x="535" y="549" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="bold">100</text>
+<text x="44" y="588" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="normal">2026-06</text>
+<rect x="150" y="573" width="365" height="18" rx="9" fill="#e5edf0"/><rect x="150" y="573" width="267.7" height="18" rx="9" fill="#1d9a8e"/>
+<text x="535" y="588" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="bold">77</text>
+<text x="44" y="627" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="normal">2026-07</text>
+<rect x="150" y="612" width="365" height="18" rx="9" fill="#e5edf0"/><rect x="150" y="612" width="309.4" height="18" rx="9" fill="#1d9a8e"/>
+<text x="535" y="627" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="bold">89</text>
+<text x="44" y="666" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="normal">2026-08</text>
+<rect x="150" y="651" width="365" height="18" rx="9" fill="#e5edf0"/><rect x="150" y="651" width="365.0" height="18" rx="9" fill="#1d9a8e"/>
+<text x="535" y="666" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#233547" font-weight="bold">105</text>
+<text x="590" y="378" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#344f58" font-weight="bold">7-day first contact</text>
+<text x="590" y="405" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#536b73" font-weight="normal">Direct</text>
+<rect x="665" y="390" width="205" height="18" rx="9" fill="#e5edf0"/><rect x="665" y="390" width="128.3" height="18" rx="9" fill="#637fcb"/>
+<text x="885" y="404" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#233547" font-weight="normal">62.6% · 320/511</text>
+<text x="590" y="434" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#536b73" font-weight="normal">Employer</text>
+<rect x="665" y="419" width="205" height="18" rx="9" fill="#e5edf0"/><rect x="665" y="419" width="119.7" height="18" rx="9" fill="#1d9a8e"/>
+<text x="885" y="433" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#233547" font-weight="normal">58.4% · 122/209</text>
+<text x="590" y="490" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#344f58" font-weight="bold">Day-30 check-in</text>
+<text x="590" y="517" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#536b73" font-weight="normal">Direct</text>
+<rect x="665" y="502" width="205" height="18" rx="9" fill="#e5edf0"/><rect x="665" y="502" width="140.2" height="18" rx="9" fill="#637fcb"/>
+<text x="885" y="516" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#233547" font-weight="normal">68.4% · 335/490</text>
+<text x="590" y="546" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#536b73" font-weight="normal">Employer</text>
+<rect x="665" y="531" width="205" height="18" rx="9" fill="#e5edf0"/><rect x="665" y="531" width="152.9" height="18" rx="9" fill="#1d9a8e"/>
+<text x="885" y="545" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#233547" font-weight="normal">74.6% · 150/201</text>
+<text x="590" y="602" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#344f58" font-weight="bold">Day-60 activity</text>
+<text x="590" y="629" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#536b73" font-weight="normal">Direct</text>
+<rect x="665" y="614" width="205" height="18" rx="9" fill="#e5edf0"/><rect x="665" y="614" width="125.7" height="18" rx="9" fill="#637fcb"/>
+<text x="885" y="628" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#233547" font-weight="normal">61.3% · 247/403</text>
+<text x="590" y="658" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#536b73" font-weight="normal">Employer</text>
+<rect x="665" y="643" width="205" height="18" rx="9" fill="#e5edf0"/><rect x="665" y="643" width="141.0" height="18" rx="9" fill="#1d9a8e"/>
+<text x="885" y="657" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#233547" font-weight="normal">68.8% · 119/173</text>
+<text x="590" y="728" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#78541a" font-weight="normal">Channel differences are simulated, not real-world findings.</text>
+<text x="44" y="770" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#536b73" font-weight="normal">Window rules: contact days 0–7 · day-30 check-in days 28–37 · day-60 activity days 60–74</text>
+</svg>
