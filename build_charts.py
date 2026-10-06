@@ -1,4 +1,8 @@
-"""Render the three dated, verified portfolio summaries as GitHub-friendly SVGs."""
+"""Render the Washington EV and NYC 311 summaries as GitHub-friendly SVGs.
+
+The e-commerce SVGs are generated from that project's source CSV; see
+ecommerce/README.md for its analysis-to-visualization workflow.
+"""
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -35,12 +39,6 @@ def chart(path, title, subtitle, sections, footnote, accent):
     path.write_text('\n'.join(parts), encoding='utf-8')
 
 
-chart(ROOT/'ecommerce'/'chart.svg',
-      'E-commerce purchase behavior', '12,330 shopping sessions · UCI public dataset',
-      [('Purchase rate by visitor type', [('New', 24.91, '24.91%'), ('Returning', 13.93, '13.93%')], 'Percent of sessions ending in purchase', 155, 30),
-       ('Purchase rate by product pages viewed', [('0–5 pages', 4.31, '4.31%'), ('6–20 pages', 13.22, '13.22%'), ('21–50 pages', 19.88, '19.88%'), ('51–100 pages', 22.04, '22.04%'), ('101+ pages', 31.67, '31.67%')], 'Association only; more browsing is not proven to cause purchasing', 420, 35)],
-      'Source: UCI Online Shoppers Purchasing Intention · 2018', '#11877f')
-
 chart(ROOT/'washington-ev'/'chart.svg',
       'Washington EV registry snapshot', '298,916 Washington records · September 2026 download',
       [('Vehicle type mix', [('Battery electric', 80.67, '80.67%'), ('Plug-in hybrid', 19.33, '19.33%')], 'Share of Washington-registered EVs', 155, 100),
@@ -52,13 +50,3 @@ chart(ROOT/'nyc-311'/'chart.svg',
       [('Highest-volume request types', [('Illegal Parking', 13694, '13,694'), ('Noise – Residential', 8141, '8,141'), ('Blocked Driveway', 3947, '3,947')], 'Number of requests', 155, 15000),
        ('Median recorded time to close', [('Illegal Parking', 1.64, '1.64 h'), ('Damaged Tree', 47.77, '47.77 h'), ('Unsanitary Condition', 174.38, '174.38 h')], 'Valid closed requests only; closure does not imply physical repair', 455, 190)],
       'Source: NYC Open Data 311 service requests', '#8059b1')
-
-chart(ROOT/'ecommerce'/'visitor-weekend.svg',
-      'Weekend patterns differ by visitor type', 'Purchase rate by visitor segment and session day',
-      [('Sessions ending in purchase', [('New · weekday', 26.09, '26.09%'), ('New · weekend', 21.92, '21.92%'), ('Returning · weekday', 13.18, '13.18%'), ('Returning · weekend', 16.50, '16.50%')], 'Weekend minus weekday: new −4.17 points; returning +3.31 points', 170, 30)],
-      'Descriptive comparison only; campaign and intent differences may remain', '#11877f')
-
-chart(ROOT/'ecommerce'/'visitor-traffic.svg',
-      'Traffic mix explains part of the visitor gap', 'New-minus-returning purchase-rate difference · percentage points',
-      [('Visitor-rate gap', [('Raw comparison', 10.98, '10.98 points'), ('Common traffic mix', 8.25, '8.25 points')], 'Standardized over 8 categories with at least 30 sessions per visitor group', 180, 12)],
-      'Common mix weights use pooled sessions across eligible categories · n=10,750', '#11877f')

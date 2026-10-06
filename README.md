@@ -13,6 +13,6 @@ Four portfolio case studies focused on business decisions, reproducible calculat
 
 Each project page opens with a chart and an executive brief, then explains the KPI definitions, checks, recommendation, limitations, and reproduction steps. Python analyses use only the standard library; SQL examples show the core grouping and validation logic. Standalone HTML pages provide a presentation view.
 
-`build_charts.py` regenerates the public-data charts from dated summary figures. The healthcare-operations project generates its own fictional dataset and scorecard; its `analyze.py` reproduces the calculations.
+The e-commerce project calculates its KPIs from the included source CSV and regenerates its visuals from the computed summary. Root-level `build_charts.py` renders the Washington EV and NYC 311 summary visuals. The healthcare-operations project generates its own fictional dataset and scorecard; its `analyze.py` reproduces the calculations.
 
 These are practice analyses, not client or employer work. Public-data sources and licenses are credited in their respective READMEs; the healthcare-operations dataset is synthetic and clearly labeled. The Washington source CSV is omitted because it is about 82 MB; its download instructions are included. No personal contact information is stored here.

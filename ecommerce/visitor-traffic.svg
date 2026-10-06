@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img">
-<title>Traffic mix explains part of the visitor gap</title><desc>New-minus-returning purchase-rate difference · percentage points. Common mix weights use pooled sessions across eligible categories · n=10,750</desc>
-<rect width="1000" height="1000" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img">
+<title>Traffic mix explains part of the visitor gap</title><desc>New-minus-returning purchase-rate difference · percentage points. Common weights use pooled sessions across categories · n=10,750</desc>
+<rect width="1000" height="620" fill="#ffffff"/>
 <rect width="1000" height="12" fill="#11877f"/>
-<text x="55" y="68" fill="#15243a" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="bold" text-anchor="start">Traffic mix explains part of the visitor gap</text>
-<text x="55" y="102" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="normal" text-anchor="start">New-minus-returning purchase-rate difference · percentage points</text>
-<text x="55" y="180" fill="#15243a" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="bold" text-anchor="start">Visitor-rate gap</text>
-<text x="55" y="224" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="normal" text-anchor="start">Raw comparison</text><rect x="55" y="234" width="690" height="24" rx="12" fill="#e8edf2"/><rect x="55" y="234" width="631.4" height="24" rx="12" fill="#11877f"/><text x="763" y="254" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold" text-anchor="start">10.98 points</text>
-<text x="55" y="286" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="normal" text-anchor="start">Common traffic mix</text><rect x="55" y="296" width="690" height="24" rx="12" fill="#e8edf2"/><rect x="55" y="296" width="474.4" height="24" rx="12" fill="#11877f"/><text x="763" y="316" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold" text-anchor="start">8.25 points</text>
-<text x="55" y="395" fill="#647285" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="normal" text-anchor="start">Standardized over 8 categories with at least 30 sessions per visitor group</text>
-<line x1="55" y1="927" x2="945" y2="927" stroke="#d6dee8"/>
-<text x="55" y="958" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="normal" text-anchor="start">Common mix weights use pooled sessions across eligible categories · n=10,750</text>
+<text x="55" y="68" fill="#15243a" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="bold">Traffic mix explains part of the visitor gap</text>
+<text x="55" y="102" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="normal">New-minus-returning purchase-rate difference · percentage points</text>
+<text x="55" y="180" fill="#15243a" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="bold">Visitor-rate gap</text>
+<text x="55" y="224" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="normal">Raw comparison</text><rect x="55" y="234" width="690" height="24" rx="12" fill="#e8edf2"/><rect x="55" y="234" width="631.4" height="24" rx="12" fill="#11877f"/><text x="763" y="254" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold">10.98 points</text>
+<text x="55" y="286" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="normal">Common traffic mix</text><rect x="55" y="296" width="690" height="24" rx="12" fill="#e8edf2"/><rect x="55" y="296" width="474.4" height="24" rx="12" fill="#11877f"/><text x="763" y="316" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold">8.25 points</text>
+<text x="55" y="395" fill="#647285" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="normal">Standardized over 8 traffic categories with at least 30 sessions per group</text>
+<line x1="55" y1="562" x2="945" y2="562" stroke="#d6dee8"/>
+<text x="55" y="595" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="normal">Common weights use pooled sessions across categories · n=10,750</text>
 </svg>

@@ -6,9 +6,13 @@
 
 **Decision question:** Where should an e-commerce team look first for purchase-rate improvement?
 
-**Finding:** New visitors purchased in **24.91%** of sessions versus **13.93%** for returning visitors, a **10.98 percentage-point gap**. The gap remains about **10.85 points** after comparing months on a common month mix (excluding February, which has only one new-visitor session). This is a descriptive lead, not a causal result.
+**Finding:** New visitors purchased in **24.91%** of sessions versus **13.93%** for returning visitors, a **10.98 percentage-point gap**. The gap remains about **10.85 points** after comparing both groups across the same nine months with at least 30 new-visitor sessions. Each month is weighted by its pooled New and Returning sessions; February is excluded because it has only one new-visitor session. This is a descriptive lead, not a causal result.
 
 **Recommended next action:** Audit the returning-visitor journey by acquisition source and device, then test one specific change such as clearer product re-entry or cart messaging. Define purchase rate as the primary outcome and monitor guardrails such as average order value and bounce rate.
+
+## Interview walkthrough
+
+> I analyzed 12,330 sessions and defined conversion as sessions with `Revenue = TRUE` divided by all sessions in a group. New visitors converted at 24.91%, compared with 13.93% for returning visitors. Because the groups may come from different traffic mixes, I standardized them across the same eight traffic categories; the gap narrowed to 8.25 points but did not disappear. I also checked whether weekend behavior was consistent across the two groups and found opposite directions, which argues against one blanket timing change. These are observational patterns, so I would investigate the returning-visitor experience and then test one change with a clear conversion metric and guardrails. This dataset cannot establish cause or estimate revenue impact.
 
 ## Analysis design
 
@@ -48,7 +52,16 @@ The category codes are anonymized, so they cannot be translated into named marke
 
 ## Reproduce
 
-Run `python analyze.py` in this folder. It uses only the standard library and the included `data/online_shoppers_intention.csv`. `queries.sql` provides the equivalent core segment checks for SQLite after importing the CSV as `sessions` and mapping Boolean values to 0/1. The standalone [case-study page](index.html) offers a quick visual narrative.
+From this folder, run:
+
+```text
+python analyze.py
+python build_charts.py
+```
+
+`analyze.py` validates the expected columns, purchase flag, row count, and blank fields, then calculates the KPI tables and writes [`summary.json`](summary.json). It stops if session or purchase totals fail to reconcile across visitor and product-page groups. Its common-month comparison weights only pooled New and Returning sessions, excluding the small Other group. `build_charts.py` reads the summary and regenerates `chart.svg`, `visitor-weekend.svg`, and `visitor-traffic.svg`, so the visual figures come from the CSV calculations rather than separate chart constants. Both scripts use only the Python standard library. `queries.sql` provides equivalent core checks for SQLite after importing the CSV as `sessions` and mapping Boolean values to 0/1. The standalone [case-study page](index.html) offers a visual narrative, and [`summary.json`](summary.json) exposes the computed figures behind it.
+
+The root-level `build_charts.py` handles the Washington EV and NYC 311 summary visuals. It no longer writes over the e-commerce charts.
 
 ## Review iterations
 

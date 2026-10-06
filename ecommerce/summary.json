@@ -1,0 +1,246 @@
+{
+  "source": "UCI Online Shoppers Purchasing Intention Dataset",
+  "source_year": 2018,
+  "session_count": 12330,
+  "purchasing_session_count": 1908,
+  "overall_purchase_rate_pct": 15.47,
+  "quality": {
+    "blank_fields": 0,
+    "identical_feature_rows_retained": 125
+  },
+  "visitor_types": {
+    "New_Visitor": {
+      "sessions": 1694,
+      "purchasing_sessions": 422,
+      "purchase_rate_pct": 24.91
+    },
+    "Returning_Visitor": {
+      "sessions": 10551,
+      "purchasing_sessions": 1470,
+      "purchase_rate_pct": 13.93
+    },
+    "Other": {
+      "sessions": 85,
+      "purchasing_sessions": 16,
+      "purchase_rate_pct": 18.82
+    }
+  },
+  "visitor_gap": {
+    "new_minus_returning_points": 10.98,
+    "approx_95_ci_points": [
+      8.82,
+      13.14
+    ]
+  },
+  "product_page_bands": {
+    "0\u20135": {
+      "sessions": 2369,
+      "purchasing_sessions": 102,
+      "purchase_rate_pct": 4.31
+    },
+    "6\u201320": {
+      "sessions": 4364,
+      "purchasing_sessions": 577,
+      "purchase_rate_pct": 13.22
+    },
+    "21\u201350": {
+      "sessions": 3445,
+      "purchasing_sessions": 685,
+      "purchase_rate_pct": 19.88
+    },
+    "51\u2013100": {
+      "sessions": 1429,
+      "purchasing_sessions": 315,
+      "purchase_rate_pct": 22.04
+    },
+    "101+": {
+      "sessions": 723,
+      "purchasing_sessions": 229,
+      "purchase_rate_pct": 31.67
+    }
+  },
+  "weekend_by_visitor": {
+    "New_Visitor": {
+      "weekday": {
+        "sessions": 1215,
+        "purchasing_sessions": 317,
+        "purchase_rate_pct": 26.09
+      },
+      "weekend": {
+        "sessions": 479,
+        "purchasing_sessions": 105,
+        "purchase_rate_pct": 21.92
+      },
+      "weekend_minus_weekday_points": -4.17,
+      "approx_95_ci_points": [
+        -8.62,
+        0.28
+      ]
+    },
+    "Returning_Visitor": {
+      "weekday": {
+        "sessions": 8169,
+        "purchasing_sessions": 1077,
+        "purchase_rate_pct": 13.18
+      },
+      "weekend": {
+        "sessions": 2382,
+        "purchasing_sessions": 393,
+        "purchase_rate_pct": 16.5
+      },
+      "weekend_minus_weekday_points": 3.31,
+      "approx_95_ci_points": [
+        1.65,
+        4.98
+      ]
+    }
+  },
+  "month_standardization": {
+    "eligible_months": [
+      "Mar",
+      "May",
+      "June",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "excluded_months": [
+      "Feb"
+    ],
+    "pooled_sessions": 12061,
+    "new_purchase_rate_pct": 25.1,
+    "returning_purchase_rate_pct": 14.25,
+    "gap_points": 10.85
+  },
+  "traffic_standardization": {
+    "minimum_sessions_per_visitor_group": 30,
+    "eligible_traffic_type_count": 8,
+    "pooled_sessions": 10750,
+    "new_purchase_rate_pct": 23.13,
+    "returning_purchase_rate_pct": 14.88,
+    "gap_points": 8.25,
+    "categories": [
+      {
+        "traffic_type": 1,
+        "new": {
+          "sessions": 37,
+          "purchasing_sessions": 7,
+          "purchase_rate_pct": 18.92
+        },
+        "returning": {
+          "sessions": 2407,
+          "purchasing_sessions": 255,
+          "purchase_rate_pct": 10.59
+        },
+        "new_minus_returning_points": 8.32
+      },
+      {
+        "traffic_type": 11,
+        "new": {
+          "sessions": 51,
+          "purchasing_sessions": 6,
+          "purchase_rate_pct": 11.76
+        },
+        "returning": {
+          "sessions": 195,
+          "purchasing_sessions": 41,
+          "purchase_rate_pct": 21.03
+        },
+        "new_minus_returning_points": -9.26
+      },
+      {
+        "traffic_type": 2,
+        "new": {
+          "sessions": 936,
+          "purchasing_sessions": 238,
+          "purchase_rate_pct": 25.43
+        },
+        "returning": {
+          "sessions": 2966,
+          "purchasing_sessions": 608,
+          "purchase_rate_pct": 20.5
+        },
+        "new_minus_returning_points": 4.93
+      },
+      {
+        "traffic_type": 3,
+        "new": {
+          "sessions": 140,
+          "purchasing_sessions": 25,
+          "purchase_rate_pct": 17.86
+        },
+        "returning": {
+          "sessions": 1905,
+          "purchasing_sessions": 154,
+          "purchase_rate_pct": 8.08
+        },
+        "new_minus_returning_points": 9.77
+      },
+      {
+        "traffic_type": 4,
+        "new": {
+          "sessions": 99,
+          "purchasing_sessions": 33,
+          "purchase_rate_pct": 33.33
+        },
+        "returning": {
+          "sessions": 970,
+          "purchasing_sessions": 132,
+          "purchase_rate_pct": 13.61
+        },
+        "new_minus_returning_points": 19.73
+      },
+      {
+        "traffic_type": 5,
+        "new": {
+          "sessions": 149,
+          "purchasing_sessions": 39,
+          "purchase_rate_pct": 26.17
+        },
+        "returning": {
+          "sessions": 110,
+          "purchasing_sessions": 17,
+          "purchase_rate_pct": 15.45
+        },
+        "new_minus_returning_points": 10.72
+      },
+      {
+        "traffic_type": 6,
+        "new": {
+          "sessions": 42,
+          "purchasing_sessions": 11,
+          "purchase_rate_pct": 26.19
+        },
+        "returning": {
+          "sessions": 401,
+          "purchasing_sessions": 42,
+          "purchase_rate_pct": 10.47
+        },
+        "new_minus_returning_points": 15.72
+      },
+      {
+        "traffic_type": 8,
+        "new": {
+          "sessions": 175,
+          "purchasing_sessions": 50,
+          "purchase_rate_pct": 28.57
+        },
+        "returning": {
+          "sessions": 167,
+          "purchasing_sessions": 45,
+          "purchase_rate_pct": 26.95
+        },
+        "new_minus_returning_points": 1.63
+      }
+    ]
+  },
+  "reconciliation_checks": {
+    "visitor_sessions_equal_total": true,
+    "visitor_purchases_equal_total": true,
+    "page_band_sessions_equal_total": true,
+    "page_band_purchases_equal_total": true
+  }
+}

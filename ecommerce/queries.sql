@@ -38,6 +38,30 @@ WHERE VisitorType IN ('New_Visitor', 'Returning_Visitor')
 GROUP BY Month, VisitorType
 ORDER BY Month, VisitorType;
 
+-- Compare visitor types on the same month distribution.
+-- Weights are pooled new/returning sessions in eligible months, excluding Other.
+WITH monthly AS (
+    SELECT Month,
+           SUM(CASE WHEN VisitorType = 'New_Visitor' THEN 1 ELSE 0 END) AS new_sessions,
+           SUM(CASE WHEN VisitorType = 'New_Visitor' THEN Revenue ELSE 0 END) AS new_purchases,
+           SUM(CASE WHEN VisitorType = 'Returning_Visitor' THEN 1 ELSE 0 END) AS returning_sessions,
+           SUM(CASE WHEN VisitorType = 'Returning_Visitor' THEN Revenue ELSE 0 END) AS returning_purchases
+    FROM sessions
+    WHERE VisitorType IN ('New_Visitor', 'Returning_Visitor')
+    GROUP BY Month
+), eligible AS (
+    SELECT *, new_sessions + returning_sessions AS pooled_sessions
+    FROM monthly
+    WHERE new_sessions >= 30 AND returning_sessions > 0
+)
+SELECT COUNT(*) AS eligible_months,
+       SUM(pooled_sessions) AS pooled_sessions,
+       ROUND(100.0 * SUM(pooled_sessions * 1.0 * new_purchases / new_sessions)
+             / SUM(pooled_sessions), 2) AS standardized_new_rate_pct,
+       ROUND(100.0 * SUM(pooled_sessions * 1.0 * returning_purchases / returning_sessions)
+             / SUM(pooled_sessions), 2) AS standardized_returning_rate_pct
+FROM eligible;
+
 -- Check whether the weekend pattern differs by visitor type.
 SELECT VisitorType,
        Weekend,
