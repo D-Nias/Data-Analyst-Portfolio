@@ -1,0 +1,125 @@
+{
+  "dataset": "NYC 311 Service Requests from 2020 to Present",
+  "created_date_start": "2026-06-01T00:00:00",
+  "created_date_end_exclusive": "2026-06-08T00:00:00",
+  "request_count": 80941,
+  "unique_request_keys": 80941,
+  "quality": {
+    "missing_keys": 0,
+    "duplicate_key_rows": 0,
+    "missing_close_dates": 3649,
+    "negative_durations_excluded": 14
+  },
+  "top_complaint_types": [
+    {
+      "complaint_type": "Illegal Parking",
+      "requests": 13694,
+      "close_date_present": 13694,
+      "close_date_coverage_pct": 100.0,
+      "negative_durations_excluded": 0,
+      "valid_closed_requests": 13694,
+      "mean_hours": 3.15,
+      "median_hours": 1.64,
+      "p90_hours": 7.93
+    },
+    {
+      "complaint_type": "Noise - Residential",
+      "requests": 8141,
+      "close_date_present": 8141,
+      "close_date_coverage_pct": 100.0,
+      "negative_durations_excluded": 0,
+      "valid_closed_requests": 8141,
+      "mean_hours": 2.54,
+      "median_hours": 1.27,
+      "p90_hours": 6.07
+    },
+    {
+      "complaint_type": "Noise - Street/Sidewalk",
+      "requests": 5271,
+      "close_date_present": 5271,
+      "close_date_coverage_pct": 100.0,
+      "negative_durations_excluded": 0,
+      "valid_closed_requests": 5271,
+      "mean_hours": 2.24,
+      "median_hours": 1.26,
+      "p90_hours": 5.34
+    },
+    {
+      "complaint_type": "Blocked Driveway",
+      "requests": 3947,
+      "close_date_present": 3947,
+      "close_date_coverage_pct": 100.0,
+      "negative_durations_excluded": 0,
+      "valid_closed_requests": 3947,
+      "mean_hours": 3.39,
+      "median_hours": 1.84,
+      "p90_hours": 8.13
+    },
+    {
+      "complaint_type": "Damaged Tree",
+      "requests": 2766,
+      "close_date_present": 2323,
+      "close_date_coverage_pct": 83.98,
+      "negative_durations_excluded": 0,
+      "valid_closed_requests": 2323,
+      "mean_hours": 186.81,
+      "median_hours": 47.77,
+      "p90_hours": 358.05
+    },
+    {
+      "complaint_type": "UNSANITARY CONDITION",
+      "requests": 2630,
+      "close_date_present": 2573,
+      "close_date_coverage_pct": 97.83,
+      "negative_durations_excluded": 0,
+      "valid_closed_requests": 2573,
+      "mean_hours": 298.17,
+      "median_hours": 174.38,
+      "p90_hours": 585.45
+    },
+    {
+      "complaint_type": "Street Condition",
+      "requests": 2593,
+      "close_date_present": 2466,
+      "close_date_coverage_pct": 95.1,
+      "negative_durations_excluded": 1,
+      "valid_closed_requests": 2465,
+      "mean_hours": 94.9,
+      "median_hours": 27.21,
+      "p90_hours": 190.82
+    },
+    {
+      "complaint_type": "Water System",
+      "requests": 1968,
+      "close_date_present": 1921,
+      "close_date_coverage_pct": 97.61,
+      "negative_durations_excluded": 0,
+      "valid_closed_requests": 1921,
+      "mean_hours": 81.42,
+      "median_hours": 7.33,
+      "p90_hours": 211.18
+    },
+    {
+      "complaint_type": "Abandoned Vehicle",
+      "requests": 1707,
+      "close_date_present": 1707,
+      "close_date_coverage_pct": 100.0,
+      "negative_durations_excluded": 0,
+      "valid_closed_requests": 1707,
+      "mean_hours": 4.83,
+      "median_hours": 2.9,
+      "p90_hours": 11.38
+    },
+    {
+      "complaint_type": "Dirty Condition",
+      "requests": 1520,
+      "close_date_present": 1497,
+      "close_date_coverage_pct": 98.49,
+      "negative_durations_excluded": 0,
+      "valid_closed_requests": 1497,
+      "mean_hours": 36.91,
+      "median_hours": 23.62,
+      "p90_hours": 77.07
+    }
+  ]
+}

@@ -1,7 +1,7 @@
-"""Render the Washington EV and NYC 311 summaries as GitHub-friendly SVGs.
+"""Render the Washington EV summary as GitHub-friendly SVGs.
 
-The e-commerce SVGs are generated from that project's source CSV; see
-ecommerce/README.md for its analysis-to-visualization workflow.
+The e-commerce and NYC 311 SVGs are generated from those projects' analyzed
+data; see their READMEs for their analysis-to-visualization workflows.
 """
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -44,9 +44,3 @@ chart(ROOT/'washington-ev'/'chart.svg',
       [('Vehicle type mix', [('Battery electric', 80.67, '80.67%'), ('Plug-in hybrid', 19.33, '19.33%')], 'Share of Washington-registered EVs', 155, 100),
        ('Counties with the most registered EVs', [('King', 144257, '144,257'), ('Snohomish', 37818, '37,818'), ('Pierce', 25042, '25,042')], 'Raw counts; these are not county adoption rates', 420, 150000)],
       'Source: Washington State Department of Licensing', '#16876a')
-
-chart(ROOT/'nyc-311'/'chart.svg',
-      'NYC 311 service operations', '80,941 requests created June 1–7, 2026',
-      [('Highest-volume request types', [('Illegal Parking', 13694, '13,694'), ('Noise – Residential', 8141, '8,141'), ('Blocked Driveway', 3947, '3,947')], 'Number of requests', 155, 15000),
-       ('Median recorded time to close', [('Illegal Parking', 1.64, '1.64 h'), ('Damaged Tree', 47.77, '47.77 h'), ('Unsanitary Condition', 174.38, '174.38 h')], 'Valid closed requests only; closure does not imply physical repair', 455, 190)],
-      'Source: NYC Open Data 311 service requests', '#8059b1')

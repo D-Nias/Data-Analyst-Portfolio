@@ -1,0 +1,21 @@
+{
+  "source_file": "potholes_2026_06_01_to_07_retrieved_2026_10_07.csv",
+  "filters": {
+    "created_date_start": "2026-06-01T00:00:00",
+    "created_date_end_exclusive": "2026-06-08T00:00:00",
+    "complaint_type": "Street Condition",
+    "descriptor": "Pothole"
+  },
+  "request_count": 1506,
+  "closed_date_present": 1414,
+  "close_date_coverage_pct": 93.89,
+  "missing_close_dates": 92,
+  "negative_durations_excluded": 1,
+  "closure_time": {
+    "valid_closed_requests": 1413,
+    "mean_hours": 31.11,
+    "median_hours": 17.09,
+    "p90_hours": 75.07
+  },
+  "interpretation": "Close timestamp is an administrative record and does not establish physical repair."
+}

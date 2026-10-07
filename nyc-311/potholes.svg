@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="660" viewBox="0 0 1000 660" role="img">
+<title>Pothole service request closure time</title>
+<desc>1,506 pothole requests. Close-date coverage 93.89 percent. Average recorded time to close 31.11 hours, median 17.09 hours, and 90th percentile 75.07 hours.</desc>
+<rect width="1000" height="660" fill="#ffffff"/>
+<rect width="1000" height="12" fill="#8059b1"/>
+<text x="45" y="55" fill="#15243a" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="bold">NYC 311 pothole requests</text>
+<text x="45" y="88" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="normal">Created June 1–7, 2026 · filtered extract retrieved 2026-10-07</text>
+<rect x="45" y="122" width="215" height="105" rx="12" fill="#f4f1f8" stroke="#e0d8eb"/>
+<text x="59" y="155" fill="#5c5470" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold">Requests</text>
+<text x="59" y="199" fill="#64428b" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="bold">1,506</text>
+<rect x="280" y="122" width="215" height="105" rx="12" fill="#f4f1f8" stroke="#e0d8eb"/>
+<text x="294" y="155" fill="#5c5470" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold">Close-date coverage</text>
+<text x="294" y="199" fill="#64428b" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="bold">93.89%</text>
+<rect x="515" y="122" width="215" height="105" rx="12" fill="#f4f1f8" stroke="#e0d8eb"/>
+<text x="529" y="155" fill="#5c5470" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold">Average time to close</text>
+<text x="529" y="199" fill="#64428b" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="bold">31.11 h</text>
+<rect x="750" y="122" width="215" height="105" rx="12" fill="#f4f1f8" stroke="#e0d8eb"/>
+<text x="764" y="155" fill="#5c5470" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold">Valid closed records</text>
+<text x="764" y="199" fill="#64428b" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="bold">1,413</text>
+<text x="45" y="280" fill="#15243a" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="bold">Recorded closure-time distribution</text>
+<text x="45" y="315" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="normal">Median</text><rect x="45" y="325" width="680" height="24" rx="12" fill="#ece8f3"/><rect x="45" y="325" width="154.8" height="24" rx="12" fill="#8059b1"/><text x="743" y="345" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold">17.09 hours</text>
+<text x="45" y="373" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="normal">Mean</text><rect x="45" y="383" width="680" height="24" rx="12" fill="#ece8f3"/><rect x="45" y="383" width="281.8" height="24" rx="12" fill="#8059b1"/><text x="743" y="403" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold">31.11 hours</text>
+<text x="45" y="431" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="normal">90th percentile</text><rect x="45" y="441" width="680" height="24" rx="12" fill="#ece8f3"/><rect x="45" y="441" width="680.0" height="24" rx="12" fill="#8059b1"/><text x="743" y="461" fill="#213047" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold">75.07 hours</text>
+<text x="45" y="525" fill="#354254" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="normal">The mean is above the median because of a long upper tail.</text>
+<text x="45" y="555" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="normal">92 requests have no close date; 1 negative duration excluded.</text>
+<line x1="45" y1="600" x2="955" y2="600" stroke="#d6dee8"/>
+<text x="45" y="630" fill="#5c6a79" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="normal">Administrative closure is not confirmation of a completed physical repair.</text>
+</svg>
